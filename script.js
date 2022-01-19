@@ -8,15 +8,34 @@ BONUS:
 Usiamo il DOM per stampare e chiedere le informazioni all'utente!
 */
 
-const studente = {
+const student = {
     nome: 'Davide',
     cognome: 'Vinciguerra',
-    eta: 21,
+    eta: 20,
 }
 
 const displayElement = document.getElementById('display');
 
-for (let key in studente) {
-    console.log(studente[key]);
-    displayElement.innerText += studente[key];
+for (let key in student) {
+    console.log(student[key]);
+    displayElement.innerText += student[key];
 }
+
+const students = [
+    {
+        nome: 'Davide',
+        cognome: 'Vinciguerra',
+        eta: 20,
+    },
+    {
+        nome: 'Beatrice',
+        cognome: 'Furegato',
+        eta: 18,
+    },
+    {
+        nome: 'Marcello',
+        cognome: 'Tarallo',
+        eta: 21,
+    },
+]
+
