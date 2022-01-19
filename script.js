@@ -13,3 +13,10 @@ const studente = {
     cognome: 'Vinciguerra',
     eta: 21,
 }
+
+const displayElement = document.getElementById('display');
+
+for (let key in studente) {
+    console.log(studente[key]);
+    displayElement.innerText += studente[key];
+}
