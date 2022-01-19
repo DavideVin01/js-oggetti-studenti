@@ -37,6 +37,11 @@ const students = [
         cognome: 'Tarallo',
         eta: 21,
     },
+    {
+        nome: prompt('Inserisci il tuo nome', 'Giuseppe').trim(),
+        cognome: prompt('Inserisci il tuo cognome', 'Vinciguerra').trim(),
+        eta: parseInt(prompt('Inserisci la tua età', '23').trim()),
+    },
 ]
 
 for (let i = 0; i < students.length; i++) {
@@ -46,3 +51,5 @@ for (let i = 0; i < students.length; i++) {
     console.log(currentStudent.nome);
     console.log(currentStudent.cognome);
 }
+
+console.table(students);
