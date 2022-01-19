@@ -7,3 +7,9 @@
 BONUS:
 Usiamo il DOM per stampare e chiedere le informazioni all'utente!
 */
+
+const studente = {
+    nome: 'Davide',
+    cognome: 'Vinciguerra',
+    eta: 21,
+}
