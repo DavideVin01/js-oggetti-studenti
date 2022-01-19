@@ -8,48 +8,118 @@ BONUS:
 Usiamo il DOM per stampare e chiedere le informazioni all'utente!
 */
 
+
+// # USING DOM
+// const student = {
+//     nome: 'Davide',
+//     cognome: 'Vinciguerra',
+//     eta: 20,
+// }
+
+// const displayElement = document.getElementById('display');
+
+// for (let key in student) {
+//     console.log(student[key]);
+//     displayElement.innerText += student[key];
+// }
+
+// const students = [
+//     {
+//         nome: 'Davide',
+//         cognome: 'Vinciguerra',
+//         eta: 20,
+//     },
+//     {
+//         nome: 'Beatrice',
+//         cognome: 'Furegato',
+//         eta: 18,
+//     },
+//     {
+//         nome: 'Marcello',
+//         cognome: 'Tarallo',
+//         eta: 21,
+//     },
+//     {
+//         nome: prompt('Inserisci il tuo nome', 'Giuseppe').trim(),
+//         cognome: prompt('Inserisci il tuo cognome', 'Vinciguerra').trim(),
+//         eta: parseInt(prompt('Inserisci la tua età', '23').trim()),
+//     },
+// ]
+
+// for (let i = 0; i < students.length; i++) {
+//     const currentStudent = students[i];
+
+//     console.log('---NOME COGNOME---')
+//     console.log(currentStudent.nome);
+//     console.log(currentStudent.cognome);
+// }
+
+// console.table(students);
+
+// ----------------------------
+
+// # USING CONSOLE
+const displayElement = document.getElementById('display');
+const buttonElement = document.getElementById('button');
+const displayName = document.getElementById('name');
+const displaySecondName = document.getElementById('second-name');
+const displayAge = document.getElementById('age');
+const displayResult = document.getElementById('result');
+
+let nameElement = displayName.value.toString();
+let secondNameElement = displaySecondName.value.toString();
+let ageElement = displayAge.value.toString();
+
 const student = {
     nome: 'Davide',
     cognome: 'Vinciguerra',
     eta: 20,
 }
 
-const displayElement = document.getElementById('display');
+
 
 for (let key in student) {
     console.log(student[key]);
     displayElement.innerText += student[key];
 }
 
-const students = [
-    {
-        nome: 'Davide',
-        cognome: 'Vinciguerra',
-        eta: 20,
-    },
-    {
-        nome: 'Beatrice',
-        cognome: 'Furegato',
-        eta: 18,
-    },
-    {
-        nome: 'Marcello',
-        cognome: 'Tarallo',
-        eta: 21,
-    },
-    {
-        nome: prompt('Inserisci il tuo nome', 'Giuseppe').trim(),
-        cognome: prompt('Inserisci il tuo cognome', 'Vinciguerra').trim(),
-        eta: parseInt(prompt('Inserisci la tua età', '23').trim()),
-    },
-]
+buttonElement.addEventListener('click', function () {
+    displayName.value = '';
+    displaySecondName.value = '';
+    displayAge.value = '';
 
-for (let i = 0; i < students.length; i++) {
-    const currentStudent = students[i];
+    const students = [
+        {
+            nome: 'Davide'.toString(),
+            cognome: 'Vinciguerra'.toString(),
+            eta: 20,
+        },
+        {
+            nome: 'Beatrice'.toString(),
+            cognome: 'Furegato'.toString(),
+            eta: 18,
+        },
+        {
+            nome: 'Marcello'.toString(),
+            cognome: 'Tarallo'.toString(),
+            eta: 21,
+        },
+        {
+            nome: nameElement,
+            cognome: secondNameElement,
+            eta: ageElement,
+        },
+    ]
 
-    console.log('---NOME COGNOME---')
-    console.log(currentStudent.nome);
-    console.log(currentStudent.cognome);
-}
+    for (let i = 0; i < students.length; i++) {
+        const currentStudent = students[i];
 
-console.table(students);
+        console.log('---NOME COGNOME---')
+        console.log(currentStudent.nome);
+        console.log(currentStudent.cognome);
+    }
+
+    console.table(students);
+
+    displayResult.innerText = students;
+})
