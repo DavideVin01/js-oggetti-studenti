@@ -39,3 +39,10 @@ const students = [
     },
 ]
 
+for (let i = 0; i < students.length; i++) {
+    const currentStudent = students[i];
+
+    console.log('---NOME COGNOME---')
+    console.log(currentStudent.nome);
+    console.log(currentStudent.cognome);
+}
